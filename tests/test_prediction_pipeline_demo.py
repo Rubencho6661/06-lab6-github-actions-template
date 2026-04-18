@@ -60,7 +60,9 @@ def test_data_split_returns_four_parts(feature_target_sample):
     # TODO(2): Add assertions to check:
     #   - parts is a tuple
     #   - tuple has exactly 4 elements
-    pass
+    parts = data_split(*feature_target_sample)
+    assert isinstance(parts, tuple)
+    assert len(parts) == 4
 
 
 def test_end_to_end_train_and_eval(feature_target_sample):
